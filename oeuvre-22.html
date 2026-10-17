@@ -185,7 +185,7 @@ img{object-fit:contain;-webkit-user-drag:none;user-select:none;-webkit-touch-cal
 <p class="note">N° 22 · <em>Portrait aquatique</em> · 300 €</p>
 <div class="champ"><label for="c-nom">Nom et prénom</label><input id="c-nom" name="nom" autocomplete="name" required></div>
 <div class="champ"><label for="c-email">Adresse email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
-<div class="deux"><div class="champ"><label for="c-tel">Téléphone (facultatif)</label><input id="c-tel" name="tel" type="tel" autocomplete="tel"></div>
+<div class="deux"><div class="champ"><label for="c-tel">Téléphone portable</label><input id="c-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" required></div>
 <div class="champ"><label for="c-qte">Quantité</label><input id="c-qte" name="qte" type="number" min="1" value="1" inputmode="numeric"></div></div>
 <div class="champ"><label for="c-msg">Message (format souhaité, adresse de livraison, questions)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
 <p class="note" id="c-erreur" hidden></p>
@@ -208,9 +208,11 @@ b.addEventListener('click',function(){f.hidden=!f.hidden;b.setAttribute('aria-ex
 f.addEventListener('submit',function(e){
   e.preventDefault();
   var nom=f.nom.value.trim(),em=f.email.value.trim();
+  var tel=f.tel.value.trim(),chiffres=tel.replace(/[\s.\-()]/g,'');
   if(!nom||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.textContent='Indiquez votre nom et une adresse email valide.';err.hidden=false;return;}
+  if(!/^(0[67]\d{8}|\+\d{10,15})$/.test(chiffres)){err.textContent='Indiquez un numéro de téléphone portable valide, par exemple 06 12 34 56 78 ou +33 6 12 34 56 78.';err.hidden=false;f.tel.focus();return;}
   err.hidden=true;
-  var corps='Bonjour,\n\nJe souhaite commander le tirage suivant :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+(f.tel.value.trim()?'\n'+f.tel.value.trim():'');
+  var corps='Bonjour,\n\nJe souhaite commander le tirage suivant :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+'\nPortable : '+tel;
   var h='<h2>Dernière étape</h2>';
   if(D.email){
     h+='<p class="note">Votre messagerie va s\u2019ouvrir avec ce message déjà rédigé. Envoyez-le pour transmettre votre commande. Si rien ne s\u2019ouvre, copiez le texte ci-dessous et envoyez-le à <span class="adresse">'+D.email+'</span>.</p>';
