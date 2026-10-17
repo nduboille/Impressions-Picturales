@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lumière dans les feuilles · Claude Duboille</title>
+<title>Masque et mascarades · Claude Duboille</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="N° 17 « Lumière dans les feuilles », photographie de Claude Duboille. Tirage sur support rigide. Prix sur demande.">
-<meta property="og:title" content="Lumière dans les feuilles · Claude Duboille">
-<meta property="og:description" content="N° 17 « Lumière dans les feuilles », photographie de Claude Duboille. Tirage sur support rigide. Prix sur demande.">
+<meta name="description" content="N° 17 « Masque et mascarades », photographie de Claude Duboille. Photographie sur Plexiglas. 250 €.">
+<meta property="og:title" content="Masque et mascarades · Claude Duboille">
+<meta property="og:description" content="N° 17 « Masque et mascarades », photographie de Claude Duboille. Photographie sur Plexiglas. 250 €.">
 <meta property="og:image" content="https://impressions-picturales.com/images/grande/17.jpg">
 <link rel="icon" href="data:,"><style>@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(polices/cormorant-italic-0.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(polices/cormorant-normal-1.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -74,6 +74,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .details dt{color:var(--gris)}
 .details dd{margin:0}
 .vide{color:var(--gris);font-style:italic}
+.pastille{display:inline-block;font:500 .7rem/1 var(--texte);letter-spacing:.12em;text-transform:uppercase;color:var(--eau);border:1px solid currentColor;padding:.3em .55em .25em;vertical-align:.1em}
 .prix{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .prix .montant{font-family:var(--titre);font-size:1.9rem;font-variant-numeric:tabular-nums}
 .bouton{display:inline-flex;justify-content:center;align-items:center;gap:.5rem;font:500 1rem/1 var(--texte);padding:1rem 1.4rem;border:1px solid var(--encre);background:var(--encre);color:var(--mur);cursor:pointer;text-decoration:none;width:100%}
@@ -130,25 +131,20 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Les œuvres</a><a href="artiste.html">L'artiste</a></nav></header>
 <main>
 <article class="fiche">
-<div class="scene protege"><img src="images/grande/17.jpg" width="1594" height="1600" alt="Lumière dans les feuilles, photographie de Claude Duboille" loading="eager" draggable="false"></div>
+<div class="scene protege"><img src="images/grande/17.jpg" width="1600" height="1144" alt="Masque et mascarades, photographie de Claude Duboille" loading="eager" draggable="false"></div>
 <div class="cartel">
 <div><p class="etiquette">N° 17 · Impressions picturales</p></div>
-<h1>Lumière dans les feuilles</h1>
+<h1>Masque et mascarades</h1>
 <p class="auteur" style="margin:0">Claude Duboille</p>
 
-<dl class="details">
-<dt>Série</dt><dd>Abstractions naturelles</dd>
-<dt>Présentation</dt><dd>Tirage sur support rigide</dd>
-<dt>Dimensions</dt><dd>50,5 × 50 cm</dd>
-<dt>Tirage</dt><dd><span class="vide">à préciser</span></dd>
-<dt>Année</dt><dd><span class="vide">à préciser</span></dd>
-</dl>
-<div class="prix"><span class="etiquette">Prix</span><span class="montant">Prix sur demande</span></div>
+<dl class="details"><dt>Présentation</dt><dd>Photographie sur Plexiglas</dd><dt>Dimensions</dt><dd>50 × 70,5 cm</dd></dl>
+<div class="prix"><span class="etiquette">Prix</span><span class="montant">250 €</span></div>
+
 <button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander ce tirage</button>
 <p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer, réaliser le tirage et convenir de la livraison.</p>
 <form class="commande" id="commande" hidden novalidate>
 <h2>Votre commande</h2>
-<p class="note">N° 17 · <em>Lumière dans les feuilles</em> · Prix sur demande</p>
+<p class="note">N° 17 · <em>Masque et mascarades</em> · 250 €</p>
 <div class="champ"><label for="c-nom">Nom et prénom</label><input id="c-nom" name="nom" autocomplete="name" required></div>
 <div class="champ"><label for="c-email">Adresse email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
 <div class="deux"><div class="champ"><label for="c-tel">Téléphone (facultatif)</label><input id="c-tel" name="tel" type="tel" autocomplete="tel"></div>
@@ -161,14 +157,14 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </div>
 </article>
 <nav class="suite" aria-label="Œuvres voisines">
-<a href="oeuvre-16.html"><span>← N° 16</span><em>Fin du jour sur la plage</em></a>
+<a href="oeuvre-16.html"><span>← N° 16</span><em>Le couple</em></a>
 <a href="index.html" style="align-self:center">Toutes les œuvres</a>
-<a class="droite" href="oeuvre-18.html"><span>N° 18 →</span><em>L&#x27;écume</em></a>
+<a class="droite" href="oeuvre-18.html"><span>N° 18 →</span><em>Connexion</em></a>
 </nav>
 </main>
 <script>
 (function(){
-var D={"email": "cduboille34@gmail.com", "sujet": "Commande · N° 17 Lumière dans les feuilles · Claude Duboille", "oeuvre": "N° 17 « Lumière dans les feuilles », Claude Duboille", "detail": "Tirage sur support rigide, 50,5 × 50 cm · Prix sur demande"};
+var D={"email": "cduboille34@gmail.com", "sujet": "Commande · N° 17 Masque et mascarades · Claude Duboille", "oeuvre": "N° 17 « Masque et mascarades », Claude Duboille", "detail": "Photographie sur Plexiglas, 50 × 70,5 cm · 250 €"};
 var b=document.getElementById('ouvrir-commande'),f=document.getElementById('commande'),c=document.getElementById('confirmation'),err=document.getElementById('c-erreur');
 b.addEventListener('click',function(){f.hidden=!f.hidden;b.setAttribute('aria-expanded',String(!f.hidden));if(!f.hidden)document.getElementById('c-nom').focus();});
 f.addEventListener('submit',function(e){
