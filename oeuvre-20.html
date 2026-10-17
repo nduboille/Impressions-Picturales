@@ -67,6 +67,10 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .fiche{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(18rem,1fr);gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(1.5rem,4vw,3.5rem) 3rem;align-items:start}
 .scene{background:var(--surface);display:grid;place-items:center;padding:clamp(1.5rem,6vw,5rem);min-height:min(78vh,52rem)}
 .scene img{max-height:min(68vh,46rem);width:auto;max-width:100%;box-shadow:0 2px 3px var(--ombre),0 24px 48px -16px var(--ombre)}
+.gauche{display:grid;gap:clamp(1.5rem,3vw,2.5rem);min-width:0}
+.chez{margin:0;display:grid;gap:.6rem}
+.chez img{width:100%;height:auto;display:block}
+.chez figcaption{display:flex;flex-wrap:wrap;gap:.25rem 1rem;justify-content:space-between;font-size:.85rem;color:var(--gris)}
 .cartel{display:grid;gap:1.25rem;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 1.5rem)}
 .cartel h1{font-size:clamp(2.2rem,4.5vw,3.3rem);font-style:italic}
 .cartel .auteur{font-family:var(--titre);font-size:1.3rem}
@@ -131,7 +135,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Les œuvres</a><a href="artiste.html">L'artiste</a></nav></header>
 <main>
 <article class="fiche">
-<div class="scene protege"><img src="images/grande/20.jpg" width="1594" height="1600" alt="Portrait floral, photographie de Claude Duboille" loading="eager" draggable="false"></div>
+<div class="gauche"><div class="scene protege"><img src="images/grande/20.jpg" width="1594" height="1600" alt="Portrait floral, photographie de Claude Duboille" loading="eager" draggable="false"></div><figure class="chez"><div class="protege"><img src="images/chez-vous/20.jpg" width="1253" height="1253" loading="lazy" draggable="false" alt="Portrait floral mise en situation dans un intérieur"></div><figcaption><span class="etiquette">Chez vous</span><span>Mise en situation : Kseniia Buza</span></figcaption></figure></div>
 <div class="cartel">
 <div><p class="etiquette">N° 20 · Impressions picturales</p></div>
 <h1>Portrait floral</h1>
