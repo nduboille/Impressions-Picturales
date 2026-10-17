@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Étang en automne · Claude Duboille</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="N° 05 « Étang en automne », photographie de Claude Duboille. Tirage sur support rigide. Prix sur demande.">
+<meta property="og:title" content="Étang en automne · Claude Duboille">
+<meta property="og:description" content="N° 05 « Étang en automne », photographie de Claude Duboille. Tirage sur support rigide. Prix sur demande.">
+<meta property="og:image" content="https://impressions-picturales.com/images/grande/05.jpg">
+<link rel="icon" href="data:,"><style>@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(polices/cormorant-italic-0.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(polices/cormorant-normal-1.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url(polices/cormorant-normal-1.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+/* Mise en page : une cimaise. Les œuvres sont accrochées sur un mur clair, chacune accompagnée de son cartel. */
+:root{
+  --mur:#f1f3f2; --surface:#ffffff; --encre:#1b2227; --gris:#5b666d; --filet:#d3d9d8; --eau:#2c5a70; --ombre:rgba(20,30,36,.18);
+  --titre:'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --texte:'Hanken Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mesure:64ch;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}}
+:root[data-theme="dark"]{--mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mur);color:var(--encre);font:400 1.0625rem/1.6 var(--texte);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+a{color:inherit;text-decoration-color:var(--filet);text-underline-offset:.2em}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--eau);outline-offset:3px}
+.cadre{max-width:1240px;margin:0 auto}
+.entete{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:baseline;justify-content:space-between;padding-block:1.5rem 1rem;border-bottom:1px solid var(--filet)}
+.marque{font:500 .8rem/1 var(--texte);letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;gap:1.5rem;font-size:.9rem}
+.nav a{text-decoration:none;color:var(--gris)}
+.nav a:hover,.nav a[aria-current]{color:var(--encre)}
+h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;line-height:1.08}
+.ouverture{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:end;padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem)}
+.ouverture h1{font-size:clamp(3rem,8.5vw,7rem);font-style:italic;letter-spacing:-.01em}
+.ouverture .sous{font-family:var(--titre);font-size:clamp(1.3rem,2.4vw,1.75rem);margin-top:1rem}
+.lieu{display:grid;gap:.15rem;font-size:.95rem;color:var(--gris);padding-top:1.25rem;margin-top:1.5rem;border-top:1px solid var(--filet);max-width:28rem}
+.lieu strong{color:var(--encre);font-weight:500}
+.intro p{margin:0 0 1rem;max-width:var(--mesure)}
+.etiquette{font:500 .75rem/1.2 var(--texte);letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.section-titre{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline;justify-content:space-between;padding-block:2.5rem 1.5rem;border-top:1px solid var(--filet)}
+.section-titre h2{font-size:clamp(1.9rem,3.5vw,2.6rem)}
+.mur{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.25rem) clamp(1rem,2.5vw,2.25rem);padding-bottom:4rem;list-style:none;margin:0;padding-left:0}
+.oeuvre a{display:grid;gap:.85rem;text-decoration:none}
+.accroche{aspect-ratio:1/1;max-width:100%;background:var(--surface);display:grid;place-items:center;padding:12%;transition:background .3s}
+.accroche img{max-height:100%;width:auto;max-width:100%;object-fit:contain;box-shadow:0 1px 2px var(--ombre),0 10px 24px -8px var(--ombre);transition:transform .35s ease}
+.oeuvre a:hover .accroche img{transform:translateY(-3px)}
+.carte{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.1rem .9rem;align-items:baseline}
+.num{font:500 .8rem/1 var(--texte);font-variant-numeric:tabular-nums;color:var(--gris);letter-spacing:.06em}
+.carte h3{font-size:1.45rem;font-style:italic}
+.carte .info{grid-column:2;font-size:.9rem;color:var(--gris)}
+img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
+.protege{position:relative}
+.protege::after{content:"";position:absolute;inset:0}
+.pied{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;padding-block:2rem 2.5rem;border-top:1px solid var(--filet);font-size:.85rem;color:var(--gris)}
+.pied a{color:var(--gris)}
+/* page œuvre */
+.fiche{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(18rem,1fr);gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(1.5rem,4vw,3.5rem) 3rem;align-items:start}
+.scene{background:var(--surface);display:grid;place-items:center;padding:clamp(1.5rem,6vw,5rem);min-height:min(78vh,52rem)}
+.scene img{max-height:min(68vh,46rem);width:auto;max-width:100%;box-shadow:0 2px 3px var(--ombre),0 24px 48px -16px var(--ombre)}
+.cartel{display:grid;gap:1.25rem;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 1.5rem)}
+.cartel h1{font-size:clamp(2.2rem,4.5vw,3.3rem);font-style:italic}
+.cartel .auteur{font-family:var(--titre);font-size:1.3rem}
+.details{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.55rem 1.25rem;margin:0;padding-block:1.25rem;border-block:1px solid var(--filet);font-size:.95rem}
+.details dt{color:var(--gris)}
+.details dd{margin:0}
+.vide{color:var(--gris);font-style:italic}
+.prix{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.prix .montant{font-family:var(--titre);font-size:1.9rem;font-variant-numeric:tabular-nums}
+.bouton{display:inline-flex;justify-content:center;align-items:center;gap:.5rem;font:500 1rem/1 var(--texte);padding:1rem 1.4rem;border:1px solid var(--encre);background:var(--encre);color:var(--mur);cursor:pointer;text-decoration:none;width:100%}
+.bouton:hover{background:transparent;color:var(--encre)}
+.bouton.second{background:transparent;color:var(--encre)}
+.bouton.second:hover{background:var(--encre);color:var(--mur)}
+.note{font-size:.85rem;color:var(--gris);margin:0}
+.commande{display:grid;gap:1rem;padding:1.5rem;background:var(--surface);border:1px solid var(--filet)}
+.commande h2{font-size:1.6rem}
+.champ{display:grid;gap:.35rem}
+.champ label{font-size:.85rem;color:var(--gris)}
+.champ input,.champ textarea{font:inherit;font-size:1rem;color:var(--encre);background:var(--mur);border:1px solid var(--filet);padding:.7rem .8rem;width:100%;border-radius:0}
+.champ input:focus,.champ textarea:focus{border-color:var(--eau);outline:none}
+.deux{display:grid;grid-template-columns:minmax(0,1fr) 6rem;gap:1rem}
+.confirmation{display:grid;gap:.75rem}
+.confirmation pre{white-space:pre-wrap;font:inherit;font-size:.9rem;background:var(--mur);border:1px solid var(--filet);padding:1rem;margin:0}
+.adresse{font-weight:500;user-select:all;word-break:break-all}
+.suite{display:flex;justify-content:space-between;gap:1rem;padding-block:1.5rem;border-top:1px solid var(--filet);font-size:.95rem}
+.suite a{text-decoration:none;color:var(--gris);display:grid;gap:.15rem}
+.suite a:hover{color:var(--encre)}
+.suite em{font-family:var(--titre);font-size:1.25rem;color:var(--encre)}
+.suite .droite{text-align:right}
+/* page artiste */
+.artiste{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(2rem,5vw,5rem);padding-block:clamp(2.5rem,6vw,5rem) 3rem}
+.artiste h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+.artiste .texte p{margin:0 0 1.1rem;max-width:var(--mesure)}
+.chrono{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--filet)}
+.chrono li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:1rem;padding-block:.8rem;border-bottom:1px solid var(--filet);font-size:.95rem}
+.chrono .an{font-variant-numeric:tabular-nums;color:var(--gris)}
+.colonnes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-top:2.5rem}
+.liste{list-style:none;margin:.75rem 0 0;padding:0;display:grid;gap:.35rem;font-family:var(--titre);font-size:1.2rem;font-style:italic}
+.bloc{display:grid;gap:.75rem;margin-top:2.5rem}
+.texte-court{max-width:var(--mesure);padding-block:3rem 4rem}
+.texte-court h1{font-size:clamp(2.4rem,5vw,3.5rem);margin-bottom:1.5rem}
+.texte-court h2{font-size:1.5rem;margin:2rem 0 .5rem}
+.texte-court p{margin:0 0 1rem}
+@media (max-width:900px){
+  .ouverture,.fiche,.artiste{grid-template-columns:minmax(0,1fr)}
+  .mur{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cartel{position:static}
+  .scene{min-height:0}
+}
+@media (max-width:520px){
+  .mur{grid-template-columns:minmax(0,1fr)}
+  .colonnes{grid-template-columns:minmax(0,1fr)}
+  .chrono li{grid-template-columns:minmax(0,1fr);gap:.1rem}
+  .accroche{padding:9%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="cadre">
+<header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Les œuvres</a><a href="artiste.html">L'artiste</a></nav></header>
+<main>
+<article class="fiche">
+<div class="scene protege"><img src="images/grande/05.jpg" width="1600" height="1076" alt="Étang en automne, photographie de Claude Duboille" loading="eager" draggable="false"></div>
+<div class="cartel">
+<div><p class="etiquette">N° 05 · Impressions picturales</p></div>
+<h1>Étang en automne</h1>
+<p class="auteur" style="margin:0">Claude Duboille</p>
+
+<dl class="details">
+<dt>Série</dt><dd>Abstractions naturelles</dd>
+<dt>Présentation</dt><dd>Tirage sur support rigide</dd>
+<dt>Dimensions</dt><dd>32,5 × 48,3 cm</dd>
+<dt>Tirage</dt><dd><span class="vide">à préciser</span></dd>
+<dt>Année</dt><dd><span class="vide">à préciser</span></dd>
+</dl>
+<div class="prix"><span class="etiquette">Prix</span><span class="montant">Prix sur demande</span></div>
+<button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander ce tirage</button>
+<p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer, réaliser le tirage et convenir de la livraison.</p>
+<form class="commande" id="commande" hidden novalidate>
+<h2>Votre commande</h2>
+<p class="note">N° 05 · <em>Étang en automne</em> · Prix sur demande</p>
+<div class="champ"><label for="c-nom">Nom et prénom</label><input id="c-nom" name="nom" autocomplete="name" required></div>
+<div class="champ"><label for="c-email">Adresse email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+<div class="deux"><div class="champ"><label for="c-tel">Téléphone (facultatif)</label><input id="c-tel" name="tel" type="tel" autocomplete="tel"></div>
+<div class="champ"><label for="c-qte">Quantité</label><input id="c-qte" name="qte" type="number" min="1" value="1" inputmode="numeric"></div></div>
+<div class="champ"><label for="c-msg">Message (format souhaité, adresse de livraison, questions)</label><textarea id="c-msg" name="msg" rows="4"></textarea></div>
+<p class="note" id="c-erreur" hidden></p>
+<button class="bouton" type="submit">Préparer l'email de commande</button>
+</form>
+<div class="commande confirmation" id="confirmation" hidden></div>
+</div>
+</article>
+<nav class="suite" aria-label="Œuvres voisines">
+<a href="oeuvre-04.html"><span>← N° 04</span><em>Roseaux dans l&#x27;eau</em></a>
+<a href="index.html" style="align-self:center">Toutes les œuvres</a>
+<a class="droite" href="oeuvre-06.html"><span>N° 06 →</span><em>Vibrations</em></a>
+</nav>
+</main>
+<script>
+(function(){
+var D={"email": "", "sujet": "Commande · N° 05 Étang en automne · Claude Duboille", "oeuvre": "N° 05 « Étang en automne », Claude Duboille", "detail": "Tirage sur support rigide, 32,5 × 48,3 cm · Prix sur demande"};
+var b=document.getElementById('ouvrir-commande'),f=document.getElementById('commande'),c=document.getElementById('confirmation'),err=document.getElementById('c-erreur');
+b.addEventListener('click',function(){f.hidden=!f.hidden;b.setAttribute('aria-expanded',String(!f.hidden));if(!f.hidden)document.getElementById('c-nom').focus();});
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var nom=f.nom.value.trim(),em=f.email.value.trim();
+  if(!nom||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.textContent='Indiquez votre nom et une adresse email valide.';err.hidden=false;return;}
+  err.hidden=true;
+  var corps='Bonjour,\n\nJe souhaite commander le tirage suivant :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+(f.tel.value.trim()?'\n'+f.tel.value.trim():'');
+  var h='<h2>Dernière étape</h2>';
+  if(D.email){
+    h+='<p class="note">Votre messagerie va s\u2019ouvrir avec ce message déjà rédigé. Envoyez-le pour transmettre votre commande. Si rien ne s\u2019ouvre, copiez le texte ci-dessous et envoyez-le à <span class="adresse">'+D.email+'</span>.</p>';
+  } else {
+    h+='<p class="note">L\u2019adresse de commande sera bientôt indiquée ici. En attendant, adressez-vous à l\u2019accueil du cabinet.</p>';
+  }
+  h+='<pre id="c-texte"></pre><button class="bouton second" type="button" id="c-copier">Copier le texte</button>';
+  c.innerHTML=h;document.getElementById('c-texte').textContent='Objet : '+D.sujet+'\n\n'+corps;
+  f.hidden=true;c.hidden=false;
+  document.getElementById('c-copier').addEventListener('click',function(){
+    var t=document.getElementById('c-texte').textContent,btn=this;
+    function ok(){btn.textContent='Texte copié';}
+    try{navigator.clipboard.writeText(t).then(ok,function(){sel();});}catch(x){sel();}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('c-texte'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Texte sélectionné, copiez-le';}
+  });
+  if(D.email){location.href='mailto:'+D.email+'?subject='+encodeURIComponent(D.sujet)+'&body='+encodeURIComponent(corps);}
+});
+})();
+</script>
+<footer class="pied"><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
+</div>
+<script>
+document.addEventListener('contextmenu',function(e){if(e.target.closest('.protege,img'))e.preventDefault()});
+document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
+</script>
+</body>
+</html>

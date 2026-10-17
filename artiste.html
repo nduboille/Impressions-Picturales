@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claude Duboille · L&#x27;artiste</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Parcours, séries et livres de Claude Duboille, photographe à Montpellier.">
+<meta property="og:title" content="Claude Duboille · L&#x27;artiste">
+<meta property="og:description" content="Parcours, séries et livres de Claude Duboille, photographe à Montpellier.">
+
+<link rel="icon" href="data:,"><style>@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-display:swap;src:url(polices/cormorant-italic-0.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(polices/cormorant-normal-1.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url(polices/cormorant-normal-1.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(polices/hanken-normal-2.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+/* Mise en page : une cimaise. Les œuvres sont accrochées sur un mur clair, chacune accompagnée de son cartel. */
+:root{
+  --mur:#f1f3f2; --surface:#ffffff; --encre:#1b2227; --gris:#5b666d; --filet:#d3d9d8; --eau:#2c5a70; --ombre:rgba(20,30,36,.18);
+  --titre:'Cormorant Garamond', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --texte:'Hanken Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mesure:64ch;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}}
+:root[data-theme="dark"]{--mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mur);color:var(--encre);font:400 1.0625rem/1.6 var(--texte);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+a{color:inherit;text-decoration-color:var(--filet);text-underline-offset:.2em}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--eau);outline-offset:3px}
+.cadre{max-width:1240px;margin:0 auto}
+.entete{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:baseline;justify-content:space-between;padding-block:1.5rem 1rem;border-bottom:1px solid var(--filet)}
+.marque{font:500 .8rem/1 var(--texte);letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;gap:1.5rem;font-size:.9rem}
+.nav a{text-decoration:none;color:var(--gris)}
+.nav a:hover,.nav a[aria-current]{color:var(--encre)}
+h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;line-height:1.08}
+.ouverture{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:end;padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2rem,5vw,4rem)}
+.ouverture h1{font-size:clamp(3rem,8.5vw,7rem);font-style:italic;letter-spacing:-.01em}
+.ouverture .sous{font-family:var(--titre);font-size:clamp(1.3rem,2.4vw,1.75rem);margin-top:1rem}
+.lieu{display:grid;gap:.15rem;font-size:.95rem;color:var(--gris);padding-top:1.25rem;margin-top:1.5rem;border-top:1px solid var(--filet);max-width:28rem}
+.lieu strong{color:var(--encre);font-weight:500}
+.intro p{margin:0 0 1rem;max-width:var(--mesure)}
+.etiquette{font:500 .75rem/1.2 var(--texte);letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.section-titre{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:baseline;justify-content:space-between;padding-block:2.5rem 1.5rem;border-top:1px solid var(--filet)}
+.section-titre h2{font-size:clamp(1.9rem,3.5vw,2.6rem)}
+.mur{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.25rem) clamp(1rem,2.5vw,2.25rem);padding-bottom:4rem;list-style:none;margin:0;padding-left:0}
+.oeuvre a{display:grid;gap:.85rem;text-decoration:none}
+.accroche{aspect-ratio:1/1;max-width:100%;background:var(--surface);display:grid;place-items:center;padding:12%;transition:background .3s}
+.accroche img{max-height:100%;width:auto;max-width:100%;object-fit:contain;box-shadow:0 1px 2px var(--ombre),0 10px 24px -8px var(--ombre);transition:transform .35s ease}
+.oeuvre a:hover .accroche img{transform:translateY(-3px)}
+.carte{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.1rem .9rem;align-items:baseline}
+.num{font:500 .8rem/1 var(--texte);font-variant-numeric:tabular-nums;color:var(--gris);letter-spacing:.06em}
+.carte h3{font-size:1.45rem;font-style:italic}
+.carte .info{grid-column:2;font-size:.9rem;color:var(--gris)}
+img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
+.protege{position:relative}
+.protege::after{content:"";position:absolute;inset:0}
+.pied{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;padding-block:2rem 2.5rem;border-top:1px solid var(--filet);font-size:.85rem;color:var(--gris)}
+.pied a{color:var(--gris)}
+/* page œuvre */
+.fiche{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(18rem,1fr);gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(1.5rem,4vw,3.5rem) 3rem;align-items:start}
+.scene{background:var(--surface);display:grid;place-items:center;padding:clamp(1.5rem,6vw,5rem);min-height:min(78vh,52rem)}
+.scene img{max-height:min(68vh,46rem);width:auto;max-width:100%;box-shadow:0 2px 3px var(--ombre),0 24px 48px -16px var(--ombre)}
+.cartel{display:grid;gap:1.25rem;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 1.5rem)}
+.cartel h1{font-size:clamp(2.2rem,4.5vw,3.3rem);font-style:italic}
+.cartel .auteur{font-family:var(--titre);font-size:1.3rem}
+.details{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.55rem 1.25rem;margin:0;padding-block:1.25rem;border-block:1px solid var(--filet);font-size:.95rem}
+.details dt{color:var(--gris)}
+.details dd{margin:0}
+.vide{color:var(--gris);font-style:italic}
+.prix{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.prix .montant{font-family:var(--titre);font-size:1.9rem;font-variant-numeric:tabular-nums}
+.bouton{display:inline-flex;justify-content:center;align-items:center;gap:.5rem;font:500 1rem/1 var(--texte);padding:1rem 1.4rem;border:1px solid var(--encre);background:var(--encre);color:var(--mur);cursor:pointer;text-decoration:none;width:100%}
+.bouton:hover{background:transparent;color:var(--encre)}
+.bouton.second{background:transparent;color:var(--encre)}
+.bouton.second:hover{background:var(--encre);color:var(--mur)}
+.note{font-size:.85rem;color:var(--gris);margin:0}
+.commande{display:grid;gap:1rem;padding:1.5rem;background:var(--surface);border:1px solid var(--filet)}
+.commande h2{font-size:1.6rem}
+.champ{display:grid;gap:.35rem}
+.champ label{font-size:.85rem;color:var(--gris)}
+.champ input,.champ textarea{font:inherit;font-size:1rem;color:var(--encre);background:var(--mur);border:1px solid var(--filet);padding:.7rem .8rem;width:100%;border-radius:0}
+.champ input:focus,.champ textarea:focus{border-color:var(--eau);outline:none}
+.deux{display:grid;grid-template-columns:minmax(0,1fr) 6rem;gap:1rem}
+.confirmation{display:grid;gap:.75rem}
+.confirmation pre{white-space:pre-wrap;font:inherit;font-size:.9rem;background:var(--mur);border:1px solid var(--filet);padding:1rem;margin:0}
+.adresse{font-weight:500;user-select:all;word-break:break-all}
+.suite{display:flex;justify-content:space-between;gap:1rem;padding-block:1.5rem;border-top:1px solid var(--filet);font-size:.95rem}
+.suite a{text-decoration:none;color:var(--gris);display:grid;gap:.15rem}
+.suite a:hover{color:var(--encre)}
+.suite em{font-family:var(--titre);font-size:1.25rem;color:var(--encre)}
+.suite .droite{text-align:right}
+/* page artiste */
+.artiste{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(2rem,5vw,5rem);padding-block:clamp(2.5rem,6vw,5rem) 3rem}
+.artiste h1{font-size:clamp(2.8rem,7vw,5.5rem)}
+.artiste .texte p{margin:0 0 1.1rem;max-width:var(--mesure)}
+.chrono{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--filet)}
+.chrono li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:1rem;padding-block:.8rem;border-bottom:1px solid var(--filet);font-size:.95rem}
+.chrono .an{font-variant-numeric:tabular-nums;color:var(--gris)}
+.colonnes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-top:2.5rem}
+.liste{list-style:none;margin:.75rem 0 0;padding:0;display:grid;gap:.35rem;font-family:var(--titre);font-size:1.2rem;font-style:italic}
+.bloc{display:grid;gap:.75rem;margin-top:2.5rem}
+.texte-court{max-width:var(--mesure);padding-block:3rem 4rem}
+.texte-court h1{font-size:clamp(2.4rem,5vw,3.5rem);margin-bottom:1.5rem}
+.texte-court h2{font-size:1.5rem;margin:2rem 0 .5rem}
+.texte-court p{margin:0 0 1rem}
+@media (max-width:900px){
+  .ouverture,.fiche,.artiste{grid-template-columns:minmax(0,1fr)}
+  .mur{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cartel{position:static}
+  .scene{min-height:0}
+}
+@media (max-width:520px){
+  .mur{grid-template-columns:minmax(0,1fr)}
+  .colonnes{grid-template-columns:minmax(0,1fr)}
+  .chrono li{grid-template-columns:minmax(0,1fr);gap:.1rem}
+  .accroche{padding:9%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="cadre">
+<header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Les œuvres</a><a href="artiste.html" aria-current="page">L'artiste</a></nav></header>
+<main>
+<section class="artiste">
+<div><p class="etiquette">L'artiste</p><h1>Claude Duboille</h1><p class="sous" style="font-family:var(--titre);font-size:1.4rem;margin-top:.75rem">Photographe, Montpellier</p></div>
+<div class="texte"><p>Claude Duboille vit et travaille à Montpellier. La photographie est sa passion de toujours, pratiquée librement, hors de toute commande.</p><p>Dans les années 1980, Claude Duboille installe un petit laboratoire pour développer et agrandir ses propres tirages en noir et blanc argentique. La passion de la peinture et les visites régulières aux Rencontres internationales de la photographie d&#x27;Arles nourrissent son regard. L&#x27;arrivée du numérique ouvre la voie à la couleur, qui devient le cœur de son travail.</p><p>Ses séries explorent les abstractions que la nature compose d&#x27;elle-même : reflets mouvants à la surface de l&#x27;eau, textures minérales, lignes et vibrations de la lumière. Les paysages de la côte et du vignoble d&#x27;Occitanie, les ciels et les passants complètent cette recherche.</p>
+<div class="bloc"><p class="etiquette">Expositions</p><ul class="chrono"><li><span class="an">2015</span><span>« Couleurs de sable », médiathèque Jean Giono, Pérols (Montpellier Méditerranée Métropole)</span></li><li><span class="an">2017</span><span>Hôtel-restaurant Les Tourelles, Le Crotoy (Baie de Somme)</span></li><li><span class="an">2018 – 2022</span><span>Expositions personnelles en Picardie : Saint-Valery-sur-Somme, Le Crotoy, Abbeville, Amiens. Expositions collectives avec l&#x27;association Les Compagnons Artistes</span></li><li><span class="an">2023</span><span>« Les Caudalies », exposition collective, Mudaison (Hérault)</span></li><li><span class="an">2026</span><span>« Impressions picturales », cabinet Sumerson, Paris, du 3 juillet au 25 octobre</span></li></ul></div>
+<div class="colonnes"><div><p class="etiquette">Séries</p><ul class="liste"><li>Couchers de soleil en Occitanie</li><li>Vibrations et lignes</li><li>Abstraction et vibrations</li><li>Abstractions naturelles</li><li>Troncs d&#x27;arbres et abstractions</li><li>Ciels et sourires de France</li><li>Expressions éphémères</li><li>Portraits éphémères</li></ul></div><div><p class="etiquette">Livres</p><ul class="liste"><li>Vibrations et lignes</li><li>Impressions picturales</li><li>Couchers de soleil en Occitanie</li><li>Lumières et signes</li></ul></div></div>
+<div class="bloc"><p class="etiquette">Sur internet</p><p style="margin:0"><a href="https://www.lensculture.com/claude-duboille" rel="noopener">LensCulture</a> · <a href="https://www.flickr.com/photos/claudeduboille/" rel="noopener">Flickr</a></p></div>
+</div>
+</section>
+<section aria-labelledby="t-choix">
+<div class="section-titre"><h2 id="t-choix">Dans l'exposition</h2><a href="index.html">Voir les 22 œuvres</a></div>
+<ul class="mur"><li class="oeuvre"><a href="oeuvre-13.html"><div class="accroche protege"><img src="images/vignette/13.jpg" width="700" height="521" alt="Arbres liquides I, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 13</span><h3>Arbres liquides I</h3></div></a></li><li class="oeuvre"><a href="oeuvre-16.html"><div class="accroche protege"><img src="images/vignette/16.jpg" width="700" height="462" alt="Fin du jour sur la plage, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 16</span><h3>Fin du jour sur la plage</h3></div></a></li><li class="oeuvre"><a href="oeuvre-20.html"><div class="accroche protege"><img src="images/vignette/20.jpg" width="700" height="501" alt="Symétrie minérale, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 20</span><h3>Symétrie minérale</h3></div></a></li></ul>
+</section>
+</main>
+<footer class="pied"><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
+</div>
+<script>
+document.addEventListener('contextmenu',function(e){if(e.target.closest('.protege,img'))e.preventDefault()});
+document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
+</script>
+</body>
+</html>
