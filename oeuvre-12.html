@@ -61,6 +61,31 @@ h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;lin
 img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .protege{position:relative}
 .protege::after{content:"";position:absolute;inset:0}
+/* page d'introduction */
+.entree{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;min-height:calc(100svh - 5.5rem);padding-block:clamp(1.5rem,5vw,4rem)}
+.entree-photo{background:var(--surface);display:flex;justify-content:center;align-items:center;padding:clamp(1.5rem,5vw,4.5rem)}
+.entree-photo img{display:block;width:auto;max-width:100%;height:auto;max-height:min(74svh,50rem);box-shadow:0 2px 3px var(--ombre),0 28px 56px -18px var(--ombre);transition:transform .5s ease}
+.entree-photo:hover img{transform:translateY(-4px)}
+.entree-texte{display:grid;gap:1.1rem;justify-items:start}
+.entree-texte h1{font-size:clamp(3.2rem,7.5vw,6.8rem);font-style:italic;letter-spacing:-.01em}
+.entree-texte .sous{font-family:var(--titre);font-size:clamp(1.5rem,2.6vw,2rem);margin:0}
+.entree-texte .lieu{margin-top:.5rem}
+.logo-entree{display:grid;gap:.6rem;justify-items:start;text-decoration:none;color:var(--encre);margin-top:.25rem}
+.logo-entree svg{width:7.5rem;height:auto;display:block}
+.logo-pied{color:var(--encre);display:block;flex-basis:100%}
+.logo-pied svg{width:4.2rem;height:auto;display:block;opacity:.9}
+.cabinet{display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;padding-block:clamp(2.5rem,6vw,4.5rem);border-top:1px solid var(--filet)}
+.cabinet-logo{color:var(--encre);display:block}
+.cabinet-logo svg{width:100%;max-width:12rem;height:auto;display:block}
+.cabinet-texte h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:.5rem 0 1.25rem}
+.cabinet-texte p{max-width:var(--mesure);margin:0 0 1rem}
+.cabinet ~ .pied .logo-pied{display:none}
+.lien-fleche{font-weight:500;text-decoration-color:var(--eau)}
+@media (max-width:700px){.cabinet{grid-template-columns:minmax(0,1fr)}.cabinet-logo svg{max-width:8rem}}
+.entree-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.75rem}
+.entree-actions .bouton{width:auto}
+.entree-texte .note a{color:inherit}
+@media (max-width:900px){.entree{grid-template-columns:minmax(0,1fr);min-height:0}.entree-photo img{max-height:62svh}}
 .visite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:3rem 4rem;border-top:1px solid var(--filet)}
 .visite h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:.5rem 0 1.25rem}
 .visite-texte p{max-width:var(--mesure);margin:0 0 1rem}
@@ -138,7 +163,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </head>
 <body>
 <div class="cadre">
-<header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Les œuvres</a><a href="artiste.html">L'artiste</a></nav></header>
+<header class="entete"><a class="marque" href="index.html">Claude Duboille · Impressions picturales</a><nav class="nav" aria-label="Navigation principale"><a href="oeuvres.html">Les œuvres</a><a href="artiste.html">L'artiste</a></nav></header>
 <main>
 <article class="fiche">
 <div class="gauche"><div class="scene protege"><img src="images/grande/12.jpg" width="1093" height="1600" alt="Soleil couchant, photographie de Claude Duboille" loading="eager" draggable="false"></div><figure class="chez"><div class="protege"><img src="images/chez-vous/12.jpg" width="1311" height="1198" loading="lazy" draggable="false" alt="Soleil couchant mise en situation dans un intérieur"></div><figcaption><span class="etiquette">Chez vous</span><span>Mise en situation : Kseniia Buza</span></figcaption></figure></div>
@@ -168,7 +193,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </article>
 <nav class="suite" aria-label="Œuvres voisines">
 <a href="oeuvre-11.html"><span>← N° 11</span><em>Le jardin extraordinaire</em></a>
-<a href="index.html" style="align-self:center">Toutes les œuvres</a>
+<a href="oeuvres.html" style="align-self:center">Toutes les œuvres</a>
 <a class="droite" href="oeuvre-13.html"><span>N° 13 →</span><em>Abstraction 4</em></a>
 </nav>
 </main>
@@ -202,7 +227,40 @@ f.addEventListener('submit',function(e){
 });
 })();
 </script>
-<footer class="pied"><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
+<footer class="pied"><a class="logo-pied" href="https://www.sumerson.com" rel="noopener"><svg role="img" aria-label="Sumerson" viewBox="0 0 380 254" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M214.573 227.329L213.402 227.968L153.789 118.677L154.96 118.038L214.573 227.329Z" fill="url(#paint0_linear_5_22)"/>
+<path d="M229.189 226.114L228.018 226.753L167.128 115.12L168.299 114.481L229.189 226.114Z" fill="url(#paint1_linear_5_22)"/>
+<path d="M225.068 228.941L220.177 230.275L156.457 113.342L161.043 112.008L225.068 228.941Z" fill="url(#paint2_linear_5_22)"/>
+<path d="M157.931 115.565L156.457 113.289L214.949 92L215.861 94.5068L157.931 115.565Z" fill="url(#paint3_linear_5_22)"/>
+<path d="M156.748 254L155.836 251.493L222.684 227.163L224.179 227.607L225.068 228.941L223.596 229.669L156.748 254Z" fill="url(#paint4_linear_5_22)"/>
+<path d="M153.221 115.404L142 105.919L153.167 100.712L153.221 115.404Z" fill="#CE9E43"/>
+<path d="M231.855 228.327L237.653 230.043L233.242 233.016L231.855 228.327Z" fill="#CE9E43"/>
+<path d="M228.819 230.097L227.407 235.976L232.187 233.642L228.819 230.097Z" fill="#CE9E43"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4835 0.241561C4.5672 1.25424 0.154647 5.92055 0.571454 11.7752C0.979424 17.4837 3.5598 19.7733 15.5117 25.0272C23.3132 28.4579 26.5667 32.0288 26.5593 37.1542C26.5446 48.837 8.45839 51.2063 1.1267 40.4875L0 38.8401L0.237117 40.954C0.366725 42.1173 0.475716 43.4326 0.477189 43.8769C0.484553 45.7458 8.20947 48.2583 13.9446 48.2583C32.2473 48.2583 35.9353 30.4936 19.2748 22.5958C16.849 21.4459 13.2995 19.7659 11.3878 18.864C5.28593 15.9824 3.35949 13.5496 3.61429 9.03831C4.1283 -0.0640159 19.2733 -2.03476 25.1454 6.23793L26.1778 7.692V6.4948C26.1778 3.50842 25.8096 2.86036 23.5312 1.84472C19.8094 0.183986 15.6487 -0.369591 11.4835 0.241561ZM254.632 0.632756C246.012 1.8772 241.508 9.07816 245.013 16.0119C246.264 18.4831 248.083 19.8899 253.238 22.3744C255.663 23.5436 259.201 25.2486 261.1 26.1638C267.341 29.1738 269.73 32.2134 269.73 37.1424C269.73 48.9108 252.456 51.4396 244.737 40.8005L243.648 39.3021L243.653 40.8005C243.664 44.7671 243.813 44.9974 247.354 46.5223C259.896 51.9223 272.838 46.2787 272.904 35.3798C272.944 28.7517 270.053 25.8317 258.223 20.5601C248.852 16.3854 246.663 14.3896 246.663 10.0229C246.663 1.18634 260.136 -1.7218 267.391 5.54855L268.963 7.12514V5.18835V3.25304L267.141 2.46769C263.242 0.787758 258.438 0.0821288 254.632 0.632756ZM300.605 1.18781C279.882 6.37374 274.794 32.4761 292.2 44.308C311.577 57.4802 337.285 40.9909 332.052 18.7459C329.08 6.1095 314.181 -2.21043 300.605 1.18781ZM42.2875 1.72958L43.2463 2.46621L43.4599 19.3083C43.6926 37.6886 43.7589 38.2599 46.0417 41.6655C51.5839 49.9382 68.4933 51.0424 75.5334 43.592C79.0667 39.8513 79.4644 37.4554 79.7589 18.1569L79.9975 2.47064L80.946 1.7222L81.896 0.97376H78.915H75.9355L76.9458 1.77092L77.9562 2.56807V19.0293C77.9562 34.6166 77.915 35.6293 77.1594 38.0798C73.7778 49.051 55.2527 50.8402 49.3806 40.7621C47.3614 37.2989 47.2244 35.9895 47.1184 19.326C47.0167 3.36227 47.1154 2.12373 48.5396 1.43434C49.1936 1.11695 48.4792 1.02248 45.3554 1.00772L41.3287 0.991476L42.2875 1.72958ZM97.9423 1.28377C95.9835 1.39596 95.9187 1.43287 96.6963 1.97907L97.5182 2.55479V24.6109V46.6655L96.5078 47.4626L95.496 48.2583L98.3282 48.2347C100.358 48.217 100.923 48.1136 100.324 47.8715C99.8629 47.6855 99.3017 47.1895 99.0764 46.7673C98.5727 45.8226 98.4976 4.86211 99.0013 5.41421C99.1854 5.61498 101.324 10.1912 103.754 15.5824C116.239 43.2761 118.35 47.8745 118.582 47.8745C118.722 47.8745 120.454 44.2844 122.432 39.897C130.022 23.0608 134.86 12.4572 137.476 6.93323L138.748 4.24209L138.848 25.1157C138.951 46.9105 138.931 47.2073 137.286 47.8715C136.719 48.1004 137.736 48.2185 140.43 48.2347L144.414 48.2583L143.404 47.4626L142.392 46.6655V24.7806C142.392 3.40804 142.411 2.87808 143.159 2.12668L143.927 1.35905H141.299H138.67L136.633 5.87479C135.514 8.35925 134.126 11.4298 133.551 12.6993C121.708 38.7928 120.247 41.915 119.909 41.8648C119.569 41.8132 118.513 39.5339 107.48 15.0288C100.91 0.439375 101.362 1.08891 97.9423 1.28377ZM170.2 1.33839C163.872 1.46534 158.999 1.60706 159.374 1.65577C160.705 1.82554 160.802 3.43756 160.802 25.0434V46.3717L159.861 47.315L158.92 48.2583H173.477C181.483 48.2583 188.036 48.2155 188.039 48.1624C188.04 48.1092 188.291 47.2486 188.593 46.2492L189.144 44.432L187.727 45.362C185.528 46.8057 181.859 47.2766 172.692 47.287L164.446 47.2973L164.344 35.4551L164.244 23.613L172.591 23.7355C177.183 23.8034 181.207 23.9909 181.535 24.1532C182.027 24.3968 182.104 24.2182 181.975 23.1155C181.831 21.8754 181.753 21.8075 180.875 22.1426C180.355 22.3405 176.404 22.5014 172.093 22.5014H164.254V12.314V2.12668L171.638 2.13407C179.277 2.14145 183.394 2.66403 185.213 3.85681C186.087 4.43253 186.117 4.41777 186.111 3.38589C186.098 0.930953 186.718 1.01067 170.2 1.33839ZM202.92 1.21734C202.331 1.38858 202.34 1.47272 203.016 2.1503C203.735 2.87069 203.76 3.6398 203.76 24.7806V46.6655L202.749 47.4626L201.739 48.2583H205.486H209.233L208.222 47.4626L207.212 46.6655V36.084V25.5025L210.831 25.6368C215.32 25.8022 215.466 25.9217 220.135 33.2511C230.123 48.9329 229.522 48.2819 233.945 48.2258C236.038 48.1993 236.336 48.1269 235.449 47.8612C233.356 47.2338 233.089 46.8795 223.945 32.6326C221.889 29.4292 219.872 26.5049 219.463 26.1328C218.432 25.1984 218.523 24.9312 219.968 24.6596C231.12 22.5619 232.173 6.3147 221.434 2.05287C219.358 1.22915 205.1 0.585517 202.92 1.21734ZM343.355 2.11192L344.521 3.20432V24.9342V46.6655L343.511 47.4626L342.501 48.2583H345.028H347.555L346.613 47.315L345.672 46.3717V25.9026C345.672 14.5431 345.817 5.59578 346 5.79802C346.343 6.18036 358.765 23.3546 370.237 39.308C373.919 44.429 377.056 48.6244 377.21 48.6303C377.364 48.6377 377.536 38.3337 377.593 25.7328L377.698 2.82346L378.848 1.90082L380 0.978191L377.411 0.975241C374.576 0.973764 374.403 1.08891 375.685 2.12816L376.548 2.82788L376.636 22.3715L376.724 41.915L375.77 40.7621C375.246 40.1288 371.452 34.9385 367.34 29.2299C363.226 23.5214 356.965 14.8708 353.425 10.0082L346.988 1.16567L344.588 1.09333L342.187 1.01953L343.355 2.11192ZM311.966 1.91116C333.185 6.41951 333.886 41.7969 312.866 47.2855C298.574 51.0159 286.154 40.4979 286.099 24.6168C286.045 9.01174 297.609 -1.1387 311.966 1.91116ZM218.959 2.8766C227.126 6.49184 227.348 19.0618 219.317 23.1716C217.494 24.1045 208.541 25.1453 207.499 24.5444C207.342 24.4529 207.212 19.3836 207.212 13.278V2.1754L208.458 1.9953C211.42 1.5672 217.073 2.04106 218.959 2.8766Z" fill="currentColor"/>
+<defs>
+<linearGradient id="paint0_linear_5_22" x1="153.399" y1="118.89" x2="213.012" y2="228.181" gradientUnits="userSpaceOnUse">
+<stop offset="0.591361" stop-color="#CE9E43"/>
+<stop offset="1" stop-color="#915F20"/>
+</linearGradient>
+<linearGradient id="paint1_linear_5_22" x1="166.737" y1="115.333" x2="227.628" y2="226.966" gradientUnits="userSpaceOnUse">
+<stop offset="0.562514" stop-color="#CE9E43"/>
+<stop offset="1" stop-color="#915F20"/>
+</linearGradient>
+<linearGradient id="paint2_linear_5_22" x1="156.067" y1="113.554" x2="220.091" y2="230.932" gradientUnits="userSpaceOnUse">
+<stop offset="0.50482" stop-color="#CE9E43"/>
+<stop offset="1" stop-color="#915F20"/>
+</linearGradient>
+<linearGradient id="paint3_linear_5_22" x1="156.305" y1="112.872" x2="214.797" y2="91.5822" gradientUnits="userSpaceOnUse">
+<stop offset="0.567322" stop-color="#CE9E43"/>
+<stop offset="1" stop-color="#CE9E43" stop-opacity="0.12"/>
+</linearGradient>
+<linearGradient id="paint4_linear_5_22" x1="155.684" y1="251.075" x2="222.532" y2="226.745" gradientUnits="userSpaceOnUse">
+<stop offset="0.552898" stop-color="#CE9E43"/>
+<stop offset="1" stop-color="#915F20"/>
+</linearGradient>
+</defs>
+</svg>
+</a><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
 </div>
 <script>
 document.addEventListener('contextmenu',function(e){if(e.target.closest('.protege,img'))e.preventDefault()});
