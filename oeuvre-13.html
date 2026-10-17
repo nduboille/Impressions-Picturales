@@ -62,9 +62,9 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .protege{position:relative}
 .protege::after{content:"";position:absolute;inset:0}
 /* page d'introduction */
-.entree{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;min-height:calc(100svh - 5.5rem);padding-block:clamp(1.5rem,5vw,4rem)}
-.entree-photo{background:var(--surface);display:flex;justify-content:center;align-items:center;padding:clamp(1.5rem,5vw,4.5rem)}
-.entree-photo img{display:block;width:auto;max-width:100%;height:auto;max-height:min(74svh,50rem);box-shadow:0 2px 3px var(--ombre),0 28px 56px -18px var(--ombre);transition:transform .5s ease}
+.entree{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;padding-block:clamp(1.5rem,4vw,3rem) clamp(1.5rem,3vw,2.5rem)}
+.entree-photo{background:var(--surface);display:flex;justify-content:center;align-items:center;padding:clamp(1.25rem,3.5vw,3rem)}
+.entree-photo img{display:block;width:auto;max-width:100%;height:auto;max-height:min(58svh,38rem);box-shadow:0 2px 3px var(--ombre),0 28px 56px -18px var(--ombre);transition:transform .5s ease}
 .entree-photo:hover img{transform:translateY(-4px)}
 .entree-texte{display:grid;gap:1.1rem;justify-items:start}
 .entree-texte h1{font-size:clamp(3.2rem,7.5vw,6.8rem);font-style:italic;letter-spacing:-.01em}
@@ -74,7 +74,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .logo-entree svg{width:7.5rem;height:auto;display:block}
 .logo-pied{color:var(--encre);display:block;flex-basis:100%}
 .logo-pied svg{width:4.2rem;height:auto;display:block;opacity:.9}
-.cabinet{display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;padding-block:clamp(2.5rem,6vw,4.5rem);border-top:1px solid var(--filet)}
+.cabinet{display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;padding-block:clamp(2rem,4vw,3rem) clamp(2.5rem,5vw,4rem);border-top:1px solid var(--filet)}
 .cabinet-logo{color:var(--encre);display:block}
 .cabinet-logo svg{width:100%;max-width:12rem;height:auto;display:block}
 .cabinet-texte h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:.5rem 0 1.25rem}
@@ -85,7 +85,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .entree-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.75rem}
 .entree-actions .bouton{width:auto}
 .entree-texte .note a{color:inherit}
-@media (max-width:900px){.entree{grid-template-columns:minmax(0,1fr);min-height:0}.entree-photo img{max-height:62svh}}
+@media (max-width:900px){.entree{grid-template-columns:minmax(0,1fr)}.entree-photo img{max-height:52svh}}
 .visite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:3rem 4rem;border-top:1px solid var(--filet)}
 .visite h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:.5rem 0 1.25rem}
 .visite-texte p{max-width:var(--mesure);margin:0 0 1rem}
