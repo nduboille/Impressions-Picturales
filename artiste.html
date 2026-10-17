@@ -51,8 +51,8 @@ h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;lin
 .section-titre h2{font-size:clamp(1.9rem,3.5vw,2.6rem)}
 .mur{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.25rem) clamp(1rem,2.5vw,2.25rem);padding-bottom:4rem;list-style:none;margin:0;padding-left:0}
 .oeuvre a{display:grid;gap:.85rem;text-decoration:none}
-.accroche{aspect-ratio:1/1;max-width:100%;background:var(--surface);display:grid;place-items:center;padding:12%;transition:background .3s}
-.accroche img{max-height:100%;width:auto;max-width:100%;object-fit:contain;box-shadow:0 1px 2px var(--ombre),0 10px 24px -8px var(--ombre);transition:transform .35s ease}
+.accroche{aspect-ratio:1/1;max-width:100%;background:var(--surface);display:flex;align-items:center;justify-content:center;padding:12%;overflow:hidden;transition:background .3s}
+.accroche img{display:block;height:auto;max-width:100%;flex:none;box-shadow:0 1px 2px var(--ombre),0 10px 24px -8px var(--ombre);transition:transform .35s ease}
 .oeuvre a:hover .accroche img{transform:translateY(-3px)}
 .carte{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.1rem .9rem;align-items:baseline}
 .num{font:500 .8rem/1 var(--texte);font-variant-numeric:tabular-nums;color:var(--gris);letter-spacing:.06em}
@@ -150,7 +150,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 </section>
 <section aria-labelledby="t-choix">
 <div class="section-titre"><h2 id="t-choix">Dans l'exposition</h2><a href="index.html">Voir les 22 œuvres</a></div>
-<ul class="mur"><li class="oeuvre"><a href="oeuvre-01.html"><div class="accroche protege"><img src="images/vignette/01.jpg" width="466" height="700" alt="Abstraction 1, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 01</span><h3>Abstraction 1</h3></div></a></li><li class="oeuvre"><a href="oeuvre-10.html"><div class="accroche protege"><img src="images/vignette/10.jpg" width="700" height="478" alt="L&#x27;or de la vigne, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 10</span><h3>L&#x27;or de la vigne</h3></div></a></li><li class="oeuvre"><a href="oeuvre-17.html"><div class="accroche protege"><img src="images/vignette/17.jpg" width="700" height="501" alt="Masque et mascarades, photographie de Claude Duboille" loading="lazy" draggable="false"></div><div class="carte"><span class="num">N° 17</span><h3>Masque et mascarades</h3></div></a></li></ul>
+<ul class="mur"><li class="oeuvre"><a href="oeuvre-01.html"><div class="accroche protege"><img src="images/vignette/01.jpg" width="466" height="700" alt="Abstraction 1, photographie de Claude Duboille" loading="lazy" draggable="false" style="width:66.57%"></div><div class="carte"><span class="num">N° 01</span><h3>Abstraction 1</h3></div></a></li><li class="oeuvre"><a href="oeuvre-10.html"><div class="accroche protege"><img src="images/vignette/10.jpg" width="700" height="478" alt="L&#x27;or de la vigne, photographie de Claude Duboille" loading="lazy" draggable="false" style="width:100%"></div><div class="carte"><span class="num">N° 10</span><h3>L&#x27;or de la vigne</h3></div></a></li><li class="oeuvre"><a href="oeuvre-17.html"><div class="accroche protege"><img src="images/vignette/17.jpg" width="700" height="501" alt="Masque et mascarades, photographie de Claude Duboille" loading="lazy" draggable="false" style="width:100%"></div><div class="carte"><span class="num">N° 17</span><h3>Masque et mascarades</h3></div></a></li></ul>
 </section>
 </main>
 <footer class="pied"><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
