@@ -27,6 +27,7 @@
   --mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}}
 :root[data-theme="dark"]{--mur:#13171a; --surface:#1b2125; --encre:#e6eae9; --gris:#9aa6ac; --filet:#2a3237; --eau:#93bdd1; --ombre:rgba(0,0,0,.55); color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--mur);color:var(--encre);font:400 1.0625rem/1.6 var(--texte);
   padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
@@ -58,7 +59,7 @@ h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;lin
 .num{font:500 .8rem/1 var(--texte);font-variant-numeric:tabular-nums;color:var(--gris);letter-spacing:.06em}
 .carte h3{font-size:1.45rem;font-style:italic}
 .carte .info{grid-column:2;font-size:.9rem;color:var(--gris)}
-img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
+img{object-fit:contain;-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .protege{position:relative}
 .protege::after{content:"";position:absolute;inset:0}
 /* page d'introduction */
@@ -97,7 +98,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 /* page œuvre */
 .fiche{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(18rem,1fr);gap:clamp(1.5rem,4vw,4rem);padding-block:clamp(1.5rem,4vw,3.5rem) 3rem;align-items:start}
 .scene{background:var(--surface);display:grid;place-items:center;padding:clamp(1.5rem,6vw,5rem);min-height:min(78vh,52rem)}
-.scene img{max-height:min(68vh,46rem);width:auto;max-width:100%;box-shadow:0 2px 3px var(--ombre),0 24px 48px -16px var(--ombre)}
+.scene img{display:block;max-height:min(68vh,46rem);width:auto;height:auto;max-width:100%;box-shadow:0 2px 3px var(--ombre),0 24px 48px -16px var(--ombre)}
 .gauche{display:grid;gap:clamp(1.5rem,3vw,2.5rem);min-width:0}
 .chez{margin:0;display:grid;gap:.6rem}
 .chez img{width:100%;height:auto;display:block}
