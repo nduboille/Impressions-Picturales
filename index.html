@@ -61,6 +61,12 @@ h1,h2,h3{font-family:var(--titre);font-weight:500;text-wrap:balance;margin:0;lin
 img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 .protege{position:relative}
 .protege::after{content:"";position:absolute;inset:0}
+.visite{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:clamp(2rem,5vw,5rem);align-items:center;padding-block:3rem 4rem;border-top:1px solid var(--filet)}
+.visite h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin:.5rem 0 1.25rem}
+.visite-texte p{max-width:var(--mesure);margin:0 0 1rem}
+.visite-video{background:var(--surface);padding:clamp(.75rem,2vw,1.25rem)}
+.visite-video video{display:block;width:100%;height:auto;max-height:78vh;background:#000;box-shadow:0 10px 24px -8px var(--ombre)}
+@media (max-width:900px){.visite{grid-template-columns:minmax(0,1fr)}.visite-video{max-width:24rem}}
 .pied{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;padding-block:2rem 2.5rem;border-top:1px solid var(--filet);font-size:.85rem;color:var(--gris)}
 .pied a{color:var(--gris)}
 /* page œuvre */
@@ -230,6 +236,13 @@ img{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
 <div class="accroche protege"><img src="images/vignette/22.jpg" width="700" height="646" alt="Portrait aquatique, photographie de Claude Duboille" loading="lazy" draggable="false"></div>
 <div class="carte"><span class="num">N° 22</span><h3>Portrait aquatique</h3><span class="info">Impression directe sur Dibond · 300 €</span></div>
 </a></li></ul>
+</section>
+<section class="visite" aria-labelledby="t-visite">
+<div class="visite-texte"><p class="etiquette">Visite</p><h2 id="t-visite">L'exposition au cabinet</h2>
+<p>Les vingt-deux tirages sont accrochés dans les couloirs, le salon, la salle de réunion et les bureaux du cabinet Sumerson, au 22 rue de la Paix, 75002 Paris. Une courte visite en images.</p>
+<p class="note">Durée 1 min 50. Musique originale composée pour l'exposition.</p></div>
+<div class="visite-video"><video controls playsinline preload="metadata" poster="video/affiche.jpg" width="464" height="848" controlslist="nodownload">
+<source src="video/exposition.mp4" type="video/mp4">Votre navigateur ne peut pas lire cette vidéo.</video></div>
 </section>
 </main>
 <footer class="pied"><span>Photographies © Claude Duboille. Toute reproduction est interdite.</span><span>Cabinet Sumerson, 22 rue de la Paix, 75002 Paris · <a href="mentions-legales.html">Mentions légales</a></span></footer>
