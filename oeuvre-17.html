@@ -178,8 +178,9 @@ img{object-fit:contain;-webkit-user-drag:none;user-select:none;-webkit-touch-cal
 <dl class="details"><dt>Présentation</dt><dd>Photographie sur Plexiglas</dd><dt>Dimensions</dt><dd>50 × 70,5 cm</dd></dl>
 <div class="prix"><span class="etiquette">Prix</span><span class="montant">250 €</span></div>
 
-<button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander ce tirage</button>
-<p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer, réaliser le tirage et convenir de la livraison.</p>
+<button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander cette œuvre</button>
+<p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer l'achat et convenir de la livraison.</p>
+<p class="note">Le montant de la vente est attribué à l'association IFIS (Institut Français d'Information sur la Santé). Le paiement s'effectue uniquement par versement direct sur le compte de l'association.</p>
 <form class="commande" id="commande" hidden novalidate>
 <h2>Votre commande</h2>
 <p class="note">N° 17 · <em>Masque et mascarades</em> · 250 €</p>
@@ -212,7 +213,7 @@ f.addEventListener('submit',function(e){
   if(!nom||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.textContent='Indiquez votre nom et une adresse email valide.';err.hidden=false;return;}
   if(!/^(0[67]\d{8}|\+\d{10,15})$/.test(chiffres)){err.textContent='Indiquez un numéro de téléphone portable valide, par exemple 06 12 34 56 78 ou +33 6 12 34 56 78.';err.hidden=false;f.tel.focus();return;}
   err.hidden=true;
-  var corps='Bonjour,\n\nJe souhaite commander le tirage suivant :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+'\nPortable : '+tel;
+  var corps='Bonjour,\n\nJe souhaite acquérir l\u2019œuvre suivante :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+'\nPortable : '+tel;
   var h='<h2>Dernière étape</h2>';
   if(D.email){
     h+='<p class="note">Votre messagerie va s\u2019ouvrir avec ce message déjà rédigé. Envoyez-le pour transmettre votre commande. Si rien ne s\u2019ouvre, copiez le texte ci-dessous et envoyez-le à <span class="adresse">'+D.email+'</span>.</p>';

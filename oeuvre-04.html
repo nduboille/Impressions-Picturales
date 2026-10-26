@@ -175,11 +175,12 @@ img{object-fit:contain;-webkit-user-drag:none;user-select:none;-webkit-touch-cal
 <h1>Dansons sous la pluie</h1>
 <p class="auteur" style="margin:0">Claude Duboille</p>
 
-<dl class="details"><dt>Lieu</dt><dd>Place de la Comédie, Montpellier</dd><dt>Présentation</dt><dd>Impression directe sur Dibond</dd></dl>
+<dl class="details"><dt>Lieu</dt><dd>Place de la Comédie, Montpellier</dd><dt>Présentation</dt><dd>Impression directe sur Dibond</dd><dt>Dimensions</dt><dd>29 × 38,8 cm</dd></dl>
 <div class="prix"><span class="etiquette">Prix</span><span class="montant">500 €</span></div>
 
-<button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander ce tirage</button>
-<p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer, réaliser le tirage et convenir de la livraison.</p>
+<button class="bouton" type="button" id="ouvrir-commande" aria-expanded="false" aria-controls="commande">Commander cette œuvre</button>
+<p class="note">Pas de paiement en ligne. Votre demande est transmise à l'artiste, qui vous recontacte pour confirmer l'achat et convenir de la livraison.</p>
+<p class="note">Le montant de la vente est attribué à l'association IFIS (Institut Français d'Information sur la Santé). Le paiement s'effectue uniquement par versement direct sur le compte de l'association.</p>
 <form class="commande" id="commande" hidden novalidate>
 <h2>Votre commande</h2>
 <p class="note">N° 04 · <em>Dansons sous la pluie</em> · 500 €</p>
@@ -195,14 +196,14 @@ img{object-fit:contain;-webkit-user-drag:none;user-select:none;-webkit-touch-cal
 </div>
 </article>
 <nav class="suite" aria-label="Œuvres voisines">
-<a href="oeuvre-03.html"><span>← N° 03</span><em>Cascade</em></a>
+<a href="oeuvre-03.html"><span>← N° 03</span><em>Abstraction 2</em></a>
 <a href="oeuvres.html" style="align-self:center">Toutes les œuvres</a>
 <a class="droite" href="oeuvre-05.html"><span>N° 05 →</span><em>Figures animalières</em></a>
 </nav>
 </main>
 <script>
 (function(){
-var D={"email": "cduboille34@gmail.com", "sujet": "Commande · N° 04 Dansons sous la pluie · Claude Duboille", "oeuvre": "N° 04 « Dansons sous la pluie », Claude Duboille", "detail": "Impression directe sur Dibond · 500 €"};
+var D={"email": "cduboille34@gmail.com", "sujet": "Commande · N° 04 Dansons sous la pluie · Claude Duboille", "oeuvre": "N° 04 « Dansons sous la pluie », Claude Duboille", "detail": "Impression directe sur Dibond, 29 × 38,8 cm · 500 €"};
 var b=document.getElementById('ouvrir-commande'),f=document.getElementById('commande'),c=document.getElementById('confirmation'),err=document.getElementById('c-erreur');
 b.addEventListener('click',function(){f.hidden=!f.hidden;b.setAttribute('aria-expanded',String(!f.hidden));if(!f.hidden)document.getElementById('c-nom').focus();});
 f.addEventListener('submit',function(e){
@@ -212,7 +213,7 @@ f.addEventListener('submit',function(e){
   if(!nom||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){err.textContent='Indiquez votre nom et une adresse email valide.';err.hidden=false;return;}
   if(!/^(0[67]\d{8}|\+\d{10,15})$/.test(chiffres)){err.textContent='Indiquez un numéro de téléphone portable valide, par exemple 06 12 34 56 78 ou +33 6 12 34 56 78.';err.hidden=false;f.tel.focus();return;}
   err.hidden=true;
-  var corps='Bonjour,\n\nJe souhaite commander le tirage suivant :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+'\nPortable : '+tel;
+  var corps='Bonjour,\n\nJe souhaite acquérir l\u2019œuvre suivante :\n'+D.oeuvre+'\n'+D.detail+'\nQuantité : '+(f.qte.value||1)+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+nom+'\n'+em+'\nPortable : '+tel;
   var h='<h2>Dernière étape</h2>';
   if(D.email){
     h+='<p class="note">Votre messagerie va s\u2019ouvrir avec ce message déjà rédigé. Envoyez-le pour transmettre votre commande. Si rien ne s\u2019ouvre, copiez le texte ci-dessous et envoyez-le à <span class="adresse">'+D.email+'</span>.</p>';
